@@ -3,29 +3,31 @@ import Reveal from "./Reveal"
 const projects = [
   {
     number: "01",
-    title: "Sistema de Gestión",
+    title: "Sistema de Gestión para PYMEs",
     description:
-      "Aplicación web para gestionar productos, stock y operaciones de un negocio.",
+      "Aplicación fullstack desarrollada para la gestión de pequeñas y medianas empresas, permitiendo administrar usuarios, artículos, categorías e informes comerciales.",
     technologies: ["React", "Node.js", "Express", "SQL"],
     status: "Completado",
     type: "Software",
+    url: "https://github.com/chesanvsr/sistema-gestion-pymes",
   },
 
   {
     number: "02",
-    title: "Sistema de Reservas",
+    title: "Sistema de Gestión de Stock",
     description:
-      "Aplicación web para gestionar reservas, disponibilidad y turnos.",
-    technologies: ["React", "Node.js", "Sequelize", "SQLite"],
+      "Aplicación fullstack desarrollada para el control y ajuste de stock de productos, con gestión mediante API REST.",
+    technologies: ["React", "Node.js", "API REST"],
     status: "Completado",
     type: "Software",
+    url: "https://github.com/chesanvsr/gestion-stock",
   },
 
   {
     number: "03",
     title: "AI Knowledge Assistant",
-    description: 
-        "Proyecto de inteligencia artificial actualmente en desarrollo, orientado a integrar modelos de lenguaje y recuperación de información dentro de una aplicación de software.",
+    description:
+      "Proyecto de inteligencia artificial actualmente en desarrollo, orientado a integrar modelos de lenguaje y recuperación de información dentro de una aplicación de software.",
     technologies: ["Python", "LLM", "RAG", "Vector DB"],
     status: "En desarrollo",
     type: "Artificial Intelligence",
@@ -63,7 +65,6 @@ function Projects() {
 
         </div>
 
-
         {/* PROJECTS */}
 
         <Reveal className="space-y-5">
@@ -79,7 +80,6 @@ function Projects() {
 
               <div className="absolute -right-32 -top-32 h-64 w-64 rounded-full bg-violet-600/10 blur-[100px] transition duration-500 group-hover:bg-violet-600/20" />
 
-
               <div className="relative grid gap-8 md:grid-cols-[80px_1fr_auto] md:items-center">
 
                 {/* NUMBER */}
@@ -87,7 +87,6 @@ function Projects() {
                 <span className="font-mono text-sm text-gray-600">
                   {project.number}
                 </span>
-
 
                 {/* CONTENT */}
 
@@ -105,11 +104,9 @@ function Projects() {
 
                   </div>
 
-
                   <p className="mt-3 max-w-2xl text-sm leading-7 text-gray-400">
                     {project.description}
                   </p>
-
 
                   {/* TECHNOLOGIES */}
 
@@ -130,7 +127,6 @@ function Projects() {
 
                 </div>
 
-
                 {/* STATUS + LINK */}
 
                 <div className="flex flex-row items-center justify-between gap-5 md:flex-col md:items-end">
@@ -145,12 +141,18 @@ function Projects() {
                     ● {project.status}
                   </span>
 
+                  {/* LINK */}
 
-                  <button
-                    className="text-sm font-medium text-gray-400 transition group-hover:text-violet-300"
-                  >
-                    Ver proyecto →
-                  </button>
+                  {project.url && (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-medium text-gray-400 transition group-hover:text-violet-300"
+                    >
+                      Ver proyecto →
+                    </a>
+                  )}
 
                 </div>
 

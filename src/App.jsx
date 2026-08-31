@@ -261,7 +261,7 @@ function App() {
                     </p>
 
                     <h3 className="mt-1 text-xl font-semibold">
-                      Máximo
+                      Máximo Rey Sanchez
                     </h3>
 
                   </div>
